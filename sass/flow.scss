@@ -1,14 +1,10 @@
 .p-flow {
-  padding-top: 70px;
+  //padding-top: 70px;
   background: #FF9C45;
   transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
   transition: transform 3s, opacity 3s, visibility 1s;
-
-  &__container {
-    margin-top: -751px;
-  }
 
   &__emphasis {
     width: 100%;
@@ -76,16 +72,21 @@
   }
 
   &__list {
-    margin-top: 30px;
+    margin: 30px auto;
     padding: 8px;
+    width: 90%;
   }
 
   &__item {
+    width: 90%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 50px;
+    justify-content: start;
+    margin: 50px auto;
+
+    &:nth-child(1){
+      margin: 0 auto;
+    }
   }
 
   &__item::after {

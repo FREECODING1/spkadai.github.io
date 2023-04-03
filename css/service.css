@@ -1,15 +1,11 @@
 .p-service {
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   background: #fff;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
+  transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 3s, visibility 1s, -webkit-transform 3s;
-  transition: opacity 3s, visibility 1s, -webkit-transform 3s;
   transition: transform 3s, opacity 3s, visibility 1s;
-  transition: transform 3s, opacity 3s, visibility 1s, -webkit-transform 3s;
   position: relative;
 }
 .p-service__block {
@@ -49,14 +45,10 @@
   width: 50%;
 }
 .p-service__list {
-  margin: 40px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin: 40px 30px;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 @media screen and (max-width: 768px) {
   .p-service__list {
@@ -67,12 +59,8 @@
   }
 }
 .p-service__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 33.3333333333%;
 }
 @media screen and (max-width: 768px) {
@@ -112,8 +100,7 @@
 }
 
 .is-fadein {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
   visibility: visible;
-}/*# sourceMappingURL=service.css.map */
+}

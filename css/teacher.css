@@ -2,14 +2,10 @@
 .p-teacher {
   background: #FF9C45;
   z-index: 1;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
+  transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 3s, visibility 1s, -webkit-transform 3s;
-  transition: opacity 3s, visibility 1s, -webkit-transform 3s;
   transition: transform 3s, opacity 3s, visibility 1s;
-  transition: transform 3s, opacity 3s, visibility 1s, -webkit-transform 3s;
 }
 .p-teacher__parts {
   position: relative;
@@ -18,15 +14,9 @@
 .p-teacher__emphasis {
   width: 100%;
   color: #FF9C45;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 5px;
   font-size: 32px;
   font-size: 3.2rem;
@@ -67,8 +57,7 @@
   background: url("../../実務img/SP/グループ 105 (1).svg");
   background-repeat: no-repeat;
   position: absolute;
-  -webkit-transform: translate(75%, 30%);
-          transform: translate(75%, 30%);
+  transform: translate(75%, 30%);
 }
 @media screen and (max-width: 768px) {
   .p-teacher__emphasis::after {
@@ -101,8 +90,7 @@
 }
 
 .is-fadein {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
   visibility: visible;
-}/*# sourceMappingURL=teacher.css.map */
+}

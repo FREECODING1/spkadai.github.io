@@ -14,34 +14,181 @@
      object-fit: contain;
   width: 100%;
   height: 45px;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
+  transform: translateY(30px);
 }
 .l-header__logo::after {
   content: "";
-  width: 97vw;
+  width: 100vw;
   height: 50px;
   display: fixed;
   background: url("../../実務img/グループ 150.svg");
   background-repeat: repeat-x;
   background-size: contain;
   top: 40%;
-  -webkit-transform: translateY(200%);
-          transform: translateY(200%);
+  transform: translateY(200%);
   margin: 0 calc(50% - 50vw);
   position: absolute;
 }
 .l-header__list {
   width: 100%;
   height: 480px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding: 0;
   margin-top: 80px;
   position: relative;
   overflow: hidden;
 }
 .l-header__list > img {
-  position: relative;
+  position: absolute;
   overflow: hidden;
-}/*# sourceMappingURL=header.css.map */
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.l-header #slide1, .l-header #slide2, .l-header #slide3 {
+  -webkit-animation-duration: 9s; /*実行する時間。「s」は秒の事。*/
+  animation-duration: 9s; /*同上*/
+  -webkit-animation-iteration-count: infinite; /*実行する回数。「infinite」は無限に繰り返す意味。*/
+  animation-iteration-count: infinite; /*同上*/
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.l-header #slide1 {
+  -webkit-animation-name: slide1; /*上で設定しているキーフレーム（keyframes）の名前*/
+  animation-name: slide1; /*同上*/
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.l-header #slide2 {
+  -webkit-animation-name: slide2; /*上で設定しているキーフレーム（keyframes）の名前*/
+  animation-name: slide2; /*同上*/
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+}
+.l-header #slide3 {
+  -webkit-animation-name: slide3; /*上で設定しているキーフレーム（keyframes）の名前*/
+  animation-name: slide3; /*同上*/
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+}
+
+/*１枚目*/
+@-webkit-keyframes slide1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slide3 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide3 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

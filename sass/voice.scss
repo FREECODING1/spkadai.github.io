@@ -10,7 +10,7 @@
 
   &__container {
     position: relative;
-    margin-bottom: 30%;
+    margin-bottom: 10%;
   }
 
   &__emphasis {
@@ -47,7 +47,7 @@
 
     @media screen and (max-width: 768px){
       top: 5px;
-      left: 15%;
+      left: 21%;
       background-size: contain;
       width: 15%;   
     }
@@ -78,39 +78,78 @@
     color: #fff;
   }
 
+
+
+  &__slider {
+    position: relative;
+    width: 100%;
+  }
+
   &__list {
-    width: 80%;
-    height: auto;
-    margin: 18px auto;
     padding: 0;
     position: relative;
     display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    left: 8%;
+    width: 85%;
+    height: 100%;
+    margin: 0;
   }
 
   &__item {
-    position: absolute;
     background: #fff;
     box-shadow: 8px 8px;
-    animation: show 12s infinite;
+    left: 0;
+    top: 0;
+    flex-flow: row nowrap;
+    position: absolute;
+  }
 
-    &:nth-of-type(1) {
-      position: relative;
-      }
-    
-    &:nth-of-type(2) {
-      animation-delay: 0s;
-      }
-    
-    &:nth-of-type(3) {
-      animation-delay: 4s;
-      }
-    
-    &:nth-of-type(4) {
-      animation-delay: 8s;
-      }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    z-index: 1;
+  }
 
-    &:nth-of-type(5) {
-      animation-delay: 12s;
+  &__button {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 2;
+    cursor: pointer;
+
+    &.is-prev {
+      margin-left: 17%;
+      width: 3rem;
+      height: 3rem;
+      border-bottom: solid 4vw transparent;
+      border-top: solid 4vw transparent;
+      border-left: solid 4vw transparent;
+      border-right: solid 4vw #FF9C45;
+      margin-top: 150px;
+    }
+
+    &.is-next {
+      width: 3rem;
+      height: 3rem;
+      border-bottom: solid 4vw transparent;
+      border-top: solid 4vw transparent;
+      border-left: solid 4vw #FF9C45;
+      border-right: solid 4vw transparent;
+      margin-top: 150px;
+      margin-left: 77%;
     }
   }
 
@@ -156,44 +195,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    margin-right: 3%;
-  }
-
-  &__arrow {
-    width: 4rem;
-    height: 4rem;
-    display: block;
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    z-index: 2;
-    cursor: pointer;
-
-    &.is-prev {
-      width: 0;
-      height: 0;
-      border-bottom: solid 4vw transparent;
-      border-top: solid 4vw transparent;
-      border-left: solid 4vw transparent;
-      border-right: solid 4vw #FF9C45;
-      margin-top: 30%;
-      right: 80%;
-    }
-
-    &.is-next {
-      width: 0;
-      height: 0;
-      border-bottom: solid 4vw transparent;
-      border-top: solid 4vw transparent;
-      border-left: solid 4vw #FF9C45;
-      border-right: solid 4vw transparent;
-      margin-top: 30%;
-      //left: 80%;
-    }
   }
 
   &__photoBox {
@@ -235,15 +236,24 @@
   }
 }
 
-.is-fadein {
-  transform: translateX(0);
-  opacity: 1;
-  visibility: visible;
-}
 
-@keyframes show {
-  0% {opacity: 0}
-  17% {opacity: 1}
-  33% {opacity: 1}
-  50% {opacity: 0}
+  @keyframes slide{
+    0% {
+      left: 100%; /*右*/
+    }
+    3%, 25%{ /*画像が4枚なので 1/4 まで*/
+      left: 0; /*表示*/
+    }
+    28%,100%{
+      left: -100%; /*左*/
+    }
+  }
+
+  @keyframes slide-start{
+    0%,25%{
+      left: 0; /*表示*/
+    }
+    28%,100%{
+      left: -100%; /*左へ隠す*/
+    }
   }

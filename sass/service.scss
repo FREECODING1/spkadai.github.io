@@ -1,5 +1,5 @@
 .p-service {
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   background: #fff;
   transform: translateY(30px);
@@ -50,7 +50,7 @@
   }
 
   &__list {
-    margin: 40px auto;
+    margin: 40px 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

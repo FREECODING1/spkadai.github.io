@@ -1,19 +1,3 @@
-(function(){
-  //設定
-  var interval =3000; // 切り替わりの間隔（ミリ秒）
-  var fade_speed = 1000;// フェード処理の早さ（ミリ秒）
-  $(".l-header__list img").hide();
-  $(".l-header__list img:first").addClass("active").show();
-  
-  var changeImage = function(){
-      var $active = $(".l-header__list img.active");
-      var $next = $active.next("img").length?$active.next("img"):$(".l-header__list img:first");
-    
-    $active.fadeOut(fade_speed).removeClass("active");
-      $next.fadeIn(fade_speed).addClass("active");
-  }
-  setInterval(changeImage,interval);
-  }());
 
   $(function () {
     $(window).scroll(function () {
@@ -142,3 +126,21 @@
     });
     jQuery(window).scroll();
   });
+
+
+  (function(){
+  //設定
+  var interval =3000; // 切り替わりの間隔（ミリ秒）
+  var fade_speed = 1000;// フェード処理の早さ（ミリ秒）
+  $(".p-voice__list li").hide();
+  $(".p-voice__list li:first").addClass("active").show();
+  
+  var changeImage = function(){
+      var $active = $(".p-voice__list li.active");
+      var $next = $active.next("li").length?$active.next("li"):$(".p-voice__list li:first");
+    
+    $active.fadeOut(fade_speed).removeClass("active");
+      $next.fadeIn(fade_speed).addClass("active");
+  }
+  setInterval(changeImage,interval);
+  }());

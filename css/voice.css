@@ -10,7 +10,7 @@
 }
 .p-voice__container {
   position: relative;
-  margin-bottom: 30%;
+  margin-bottom: 10%;
 }
 .p-voice__emphasis {
   width: 100%;
@@ -44,7 +44,7 @@
 @media screen and (max-width: 768px) {
   .p-voice__emphasis::before {
     top: 5px;
-    left: 15%;
+    left: 21%;
     background-size: contain;
     width: 15%;
   }
@@ -73,39 +73,71 @@
   text-align: center;
   color: #fff;
 }
+.p-voice__slider {
+  position: relative;
+  width: 100%;
+}
 .p-voice__list {
-  width: 80%;
-  height: auto;
-  margin: 18px auto;
   padding: 0;
   position: relative;
   display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  z-index: 1;
+  top: 0;
+  left: 8%;
+  width: 85%;
+  height: 100%;
+  margin: 0;
 }
 .p-voice__item {
-  position: absolute;
   background: #fff;
   box-shadow: 8px 8px;
-  -webkit-animation: show 12s infinite;
-          animation: show 12s infinite;
+  left: 0;
+  top: 0;
+  flex-flow: row nowrap;
+  position: absolute;
 }
-.p-voice__item:nth-of-type(1) {
+.p-voice__buttons {
+  display: flex;
+  align-items: center;
   position: relative;
+  justify-content: space-between;
+  z-index: 1;
 }
-.p-voice__item:nth-of-type(2) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+.p-voice__button {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  z-index: 2;
+  cursor: pointer;
 }
-.p-voice__item:nth-of-type(3) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+.p-voice__button.is-prev {
+  margin-left: 17%;
+  width: 3rem;
+  height: 3rem;
+  border-bottom: solid 4vw transparent;
+  border-top: solid 4vw transparent;
+  border-left: solid 4vw transparent;
+  border-right: solid 4vw #FF9C45;
+  margin-top: 150px;
 }
-.p-voice__item:nth-of-type(4) {
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
-}
-.p-voice__item:nth-of-type(5) {
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
+.p-voice__button.is-next {
+  width: 3rem;
+  height: 3rem;
+  border-bottom: solid 4vw transparent;
+  border-top: solid 4vw transparent;
+  border-left: solid 4vw #FF9C45;
+  border-right: solid 4vw transparent;
+  margin-top: 150px;
+  margin-left: 77%;
 }
 .p-voice__span {
   position: relative;
@@ -150,40 +182,6 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  margin-right: 3%;
-}
-.p-voice__arrow {
-  width: 4rem;
-  height: 4rem;
-  display: block;
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  z-index: 2;
-  cursor: pointer;
-}
-.p-voice__arrow.is-prev {
-  width: 0;
-  height: 0;
-  border-bottom: solid 4vw transparent;
-  border-top: solid 4vw transparent;
-  border-left: solid 4vw transparent;
-  border-right: solid 4vw #FF9C45;
-  margin-top: 30%;
-  right: 80%;
-}
-.p-voice__arrow.is-next {
-  width: 0;
-  height: 0;
-  border-bottom: solid 4vw transparent;
-  border-top: solid 4vw transparent;
-  border-left: solid 4vw #FF9C45;
-  border-right: solid 4vw transparent;
-  margin-top: 30%;
 }
 .p-voice__photoBox {
   display: flex;
@@ -219,38 +217,42 @@
   padding-bottom: 30px;
 }
 
-.is-fadein {
-  transform: translateX(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-@-webkit-keyframes show {
+@-webkit-keyframes slide {
   0% {
-    opacity: 0;
+    left: 100%; /*右*/
   }
-  17% {
-    opacity: 1;
+  3%, 25% { /*画像が4枚なので 1/4 まで*/
+    left: 0; /*表示*/
   }
-  33% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
+  28%, 100% {
+    left: -100%; /*左*/
   }
 }
 
-@keyframes show {
+@keyframes slide {
   0% {
-    opacity: 0;
+    left: 100%; /*右*/
   }
-  17% {
-    opacity: 1;
+  3%, 25% { /*画像が4枚なので 1/4 まで*/
+    left: 0; /*表示*/
   }
-  33% {
-    opacity: 1;
+  28%, 100% {
+    left: -100%; /*左*/
   }
-  50% {
-    opacity: 0;
+}
+@-webkit-keyframes slide-start {
+  0%, 25% {
+    left: 0; /*表示*/
+  }
+  28%, 100% {
+    left: -100%; /*左へ隠す*/
+  }
+}
+@keyframes slide-start {
+  0%, 25% {
+    left: 0; /*表示*/
+  }
+  28%, 100% {
+    left: -100%; /*左へ隠す*/
   }
 }

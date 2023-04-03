@@ -10,7 +10,7 @@
 
   &::before {
     content: "";
-    width: 100%;
+    width: 100vw;
     height: 50px;
     display: fixed;
     background: url('../../実務img/グループ 150.svg');
@@ -26,7 +26,7 @@
     background: url("../../実務img/voice画像/グループ 133.svg");
     width: 100%;
     height: 70px;
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
     transform: scaleY(-1);
@@ -95,12 +95,12 @@
 
   &__section::before {
     content: "";
-    position: absolute;
+    //position: flex;
     background: url('../../実務img/SP/about_i_1.png');
     background-repeat: no-repeat;
     display: block;
     width: 100%;
-    height: 100px;
+    height: 145px;
     background-size: 100% 100%;
     z-index: -1;
   }
@@ -108,7 +108,7 @@
   &__section::after {
     content: "選ばれる理由5つのポイント";
     background: url('../../実務img/SP/グループ 171.svg');
-    transform: translateY(70%);
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,8 +158,8 @@
   }
 
   &__list {
-    padding: 70px 0 80px;
-    margin: 45px auto;
+    padding: 0 0 80px;
+    margin: 20px auto;
     width: 100%;
     display:flex;
     flex-wrap:wrap;
