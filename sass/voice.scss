@@ -88,8 +88,6 @@
   &__list {
     padding: 0;
     position: relative;
-    display: flex;
-    flex-flow: row nowrap;
     align-items: center;
     z-index: 1;
     top: 0;
@@ -104,16 +102,12 @@
     box-shadow: 8px 8px;
     left: 0;
     top: 0;
-    flex-flow: row nowrap;
-    position: absolute;
   }
 
   &__buttons {
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: space-between;
-    z-index: 1;
   }
 
   &__button {
