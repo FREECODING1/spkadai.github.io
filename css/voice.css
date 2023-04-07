@@ -2,7 +2,6 @@
 .p-voice {
   padding: 50px 20px;
   background: #FF9C45;
-  margin-bottom: 620px;
   transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
@@ -10,7 +9,8 @@
 }
 .p-voice__container {
   position: relative;
-  margin-bottom: 10%;
+  padding-bottom: 2%;
+  margin: 10px auto;
 }
 .p-voice__emphasis {
   width: 100%;
@@ -35,7 +35,7 @@
   content: "";
   width: 80%;
   height: 40%;
-  background: url("../../実務img/SP/グループ 105 (1).svg");
+  background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
   background-repeat: no-repeat;
   margin-left: -12%;
   position: absolute;
@@ -54,7 +54,7 @@
   width: 80%;
   height: 40%;
   margin-left: 7%;
-  background: url("../../実務img/SP/グループ 105 (1).svg");
+  background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
   background-repeat: no-repeat;
   position: absolute;
   transform: translate(75%, 30%);
@@ -73,66 +73,49 @@
   text-align: center;
   color: #fff;
 }
-.p-voice__slider {
-  position: relative;
-  width: 100%;
+.p-voice .swiper {
+  max-width: 400px;
+  margin: 0 auto;
 }
-.p-voice__list {
+.p-voice .swiper-wrapper {
   padding: 0;
-  position: relative;
-  align-items: center;
-  z-index: 1;
-  top: 0;
-  left: 8%;
-  width: 85%;
-  height: 100%;
-  margin: 0;
 }
-.p-voice__item {
+.p-voice .swiper-slide {
+  width: 80%;
+  height: 700px;
   background: #fff;
   box-shadow: 8px 8px;
-  left: 0;
-  top: 0;
-  position: relative;
 }
-.p-voice__buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.p-voice .sample-slider [class^=swiper-button-]::after {
+  content: "";
 }
-.p-voice__button {
-  width: 4rem;
-  height: 4rem;
-  display: block;
-  background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  z-index: 2;
-  cursor: pointer;
+.p-voice .swiper-button-prev {
+  width: 0;
+  height: 0;
+  border-bottom: solid 13px transparent;
+  border-top: solid 13px transparent;
+  border-left: solid 13px transparent;
+  border-right: solid 13px #FF9C45;
+  margin-top: -20rem;
+  left: 9%;
 }
-.p-voice__button.is-prev {
-  margin-left: 17%;
-  width: 3rem;
-  height: 3rem;
-  border-bottom: solid 4vw transparent;
-  border-top: solid 4vw transparent;
-  border-left: solid 4vw transparent;
-  border-right: solid 4vw #FF9C45;
-  margin-top: 150px;
+.p-voice .swiper-button-next {
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 13px solid #FF9C45;
+  border-right: 13px solid transparent;
+  height: 0;
+  width: 0;
+  margin-top: -20rem;
+  right: 7%;
 }
-.p-voice__button.is-next {
-  width: 3rem;
-  height: 3rem;
-  border-bottom: solid 4vw transparent;
-  border-top: solid 4vw transparent;
-  border-left: solid 4vw #FF9C45;
-  border-right: solid 4vw transparent;
-  margin-top: 150px;
-  margin-left: 77%;
+.p-voice .swiper-button-prev::after,
+.p-voice .swiper-button-next::after {
+  content: "";
+}
+.p-voice .swiper-horizontal > .swiper-pagination-bullets,
+.p-voice .swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: none;
 }
 .p-voice__span {
   position: relative;

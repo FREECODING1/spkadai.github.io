@@ -128,19 +128,25 @@
   });
 
 
-  (function(){
-  //設定
-  var interval =3000; // 切り替わりの間隔（ミリ秒）
-  var fade_speed = 1000;// フェード処理の早さ（ミリ秒）
-  $(".p-voice__list li").hide();
-  $(".p-voice__list li:first").addClass("active").show();
-  
-  var changeImage = function(){
-      var $active = $(".p-voice__list li.active");
-      var $next = $active.next("li").length?$active.next("li"):$(".p-voice__list li:first");
-    
-    $active.fadeOut(fade_speed).removeClass("active");
-      $next.fadeIn(fade_speed).addClass("active");
-  }
-  setInterval(changeImage,interval);
-  }());
+const swiper = new Swiper('.sample-slider', {
+    loop: true,                         //ループ
+    autoplay: {                         //自動再生
+        delay: 3000,  
+    },       
+    pagination: {                       //ページネーション（ドット）
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    navigation: {                       //ナビゲーション（矢印）
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+var Swiper = new Swiper('.sample-slider', {
+  autoplay: {
+    delay: 3000,
+  },
+});

@@ -1,5 +1,4 @@
 .p-service {
-  width: 100vw;
   margin: 0 auto;
   background: #fff;
   transform: translateY(30px);
@@ -61,7 +60,8 @@
 .p-service__item {
   display: flex;
   align-items: center;
-  width: 33.3333333333%;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .p-service__item {
@@ -69,8 +69,8 @@
   }
 }
 .p-service__text {
-  font-size: 25px;
-  font-size: 2.5rem;
+  font-size: 20px;
+  font-size: 2rem;
   margin-left: 10px;
 }
 @media screen and (max-width: 768px) {

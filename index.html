@@ -20,19 +20,14 @@
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Antonio:wght@700&family=Bebas+Neue&family=Roboto+Mono:ital,wght@1,200;1,400&family=Shadows+Into+Light&family=Unbounded&display=swap" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="jquery-3.3.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-1/js/6-1-1.js"></script>
+  <scrip src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-1/js/6-1-1.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/main.js" defer></script>
 
-
-
+  
 </head>
 
 <body>
@@ -241,15 +236,18 @@
                 塾生・保護者の声
               </h2>
             </div>
-            <div class="p-voice__slider">
-            <ul class="p-voice__list">
-              <li class="p-voice__item" id="slide1">
+          <div class="swiper sample-slider">
+            <ul class="swiper-wrapper p-voice__list">
+              <li class="swiper-slide p-voice__item" id="slide1">
                 <div class="p-voice__tag">
                   <div class="p-voice__span">生徒</div>
                 </div>
-                  <div class="p-voice__photo">
-                    <img src="./実務img/voice画像/voice3.jpg" alt="">
-                  </div>
+                <div class="p-voice__photo">
+                  <img src="./実務img/voice画像/voice3.jpg" alt="">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
                 <div class="p-voice__lead">
                   <div class="p-voice__name">
                     猪俣紗瑛さん(小3)
@@ -264,12 +262,15 @@
                   </div>
                 </div>
               </li>
-              <li class="p-voice__item" id="slide2">
+              <li class="p-voice__item swiper-slide" id="slide2">
                 <div class="p-voice__tag">
                   <div class="p-voice__span">生徒</div>
                 </div>
                   <div class="p-voice__photo">
                     <img src="./実務img/voice画像/voice4.jpg" alt="">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                   </div>
                 <div class="p-voice__lead">
                   <div class="p-voice__name">
@@ -285,12 +286,15 @@
                   </div>
                 </div>
               </li>
-              <li class="p-voice__item" id="slide3">
+              <li class="p-voice__item swiper-slide" ID="slide3">
                 <div class="p-voice__tag">
                   <div class="p-voice__span">生徒</div>
                 </div>
                   <div class="p-voice__photo">
                     <img src="./実務img/voice画像/voice5.jpg" alt="">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                   </div>
                 <div class="p-voice__lead">
                   <div class="p-voice__name">
@@ -306,12 +310,15 @@
                   </div>
                 </div>
               </li>
-              <li class="p-voice__item" id="slide4">
+              <li class="p-voice__item swiper-slide" id="slide4">
                 <div class="p-voice__tag">
                   <div class="p-voice__span">生徒</div>
                 </div>
                   <div class="p-voice__photo">
                     <img src="./実務img/voice画像/voice6.jpg" alt="">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                   </div>
                 <div class="p-voice__lead">
                   <div class="p-voice__name">
@@ -328,13 +335,12 @@
                 </div>
               </li>
             </ul>
-            <div class="p-voice__buttons">
-              <button type=button class="p-voice__button is-prev" id="right"></button>
-              <button type=button class="p-voice__button is-next" id ="left"></button>
-            </div>
-            </div>
+          </div>
           </div>
         </section>
+
+
+
 
         <section class="p-flow">
           <div class="p-flow__container">
@@ -472,7 +478,5 @@
       </div>
     </footer>
   </section>
-
-  <script src="./js/swiper.min.js"></script>
 </body>
 </html>

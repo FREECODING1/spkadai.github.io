@@ -1,4 +1,9 @@
 .l-wrapper {
   //width: 900px;
   margin: 0 auto;
+  //overflow: hidden;
+
+  @media screen and (max-width: 768px){
+    max-width: 768px;
+  }
 }

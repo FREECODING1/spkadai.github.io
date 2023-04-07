@@ -5,8 +5,8 @@
 }
 .p-contact::before {
   content: "";
-  background: url("../../実務img/voice画像/グループ 133.svg");
-  width: 100vw;
+  background: url("../実務img/voice画像/グループ 133.svg");
+  width: 100%;
   height: 80px;
   background-size: 100%;
   background-repeat: no-repeat;

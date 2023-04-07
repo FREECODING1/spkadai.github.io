@@ -9,9 +9,8 @@
 .l-footer__text::before {
   content: "";
   width: 100%;
-  height: 50px;
-  display: fixed;
-  background: url("../../実務img/グループ 150.svg");
+  height: 70px;
+  background: url("../実務img/グループ 150.svg");
   background-repeat: repeat-x;
   background-size: contain;
   transform: translateY(-30px);
@@ -19,7 +18,7 @@
   position: absolute;
   margin-top: 30px;
   left: 0;
-  top: -10%;
+  top: -5%;
 }
 .l-footer__text {
   text-align: center;

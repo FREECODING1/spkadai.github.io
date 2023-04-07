@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .p-teacher {
   background: #FF9C45;
   z-index: 1;
@@ -6,6 +5,10 @@
   opacity: 0;
   visibility: hidden;
   transition: transform 3s, opacity 3s, visibility 1s;
+  max-width: 900px;
+}
+.p-teacher__container {
+  width: 100vw;
 }
 .p-teacher__parts {
   position: relative;
@@ -35,7 +38,7 @@
   content: "";
   width: 80%;
   height: 40%;
-  background: url("../../実務img/SP/グループ 105 (1).svg");
+  background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
   background-repeat: no-repeat;
   margin-left: 12%;
   position: absolute;
@@ -54,7 +57,7 @@
   top: 10px;
   height: 15px;
   margin-left: 7%;
-  background: url("../../実務img/SP/グループ 105 (1).svg");
+  background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
   background-repeat: no-repeat;
   position: absolute;
   transform: translate(75%, 30%);
@@ -87,6 +90,7 @@
   grid-template-columns: 30% 30% 30%;
   gap: 5% 5%;
   padding: 20px 10% 5% 8%;
+  width: 70%;
 }
 
 .is-fadein {

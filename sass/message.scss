@@ -6,19 +6,11 @@
   visibility: hidden;
   transition: transform 3s, opacity 3s, visibility 1s;
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 
-  &::after {
-    content: "";
-    background: url("../../実務img/voice画像/グループ 133.svg");
-    width: 100vw;
-    height: 80px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: block;
-    position: fixed;
-    top: 0;
-    transform: translateY(853vh);
-  }
+
+  
 
   &__emphasis {
     width: 100%;
@@ -46,7 +38,7 @@
     content: "";
     width: 80%;
     height: 40%;
-    background: url("../../実務img/SP/グループ 105 (1).svg");
+    background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
     background-repeat: no-repeat;
     margin-left: -12%;
     position: absolute;
@@ -65,7 +57,7 @@
     content: "";
     width: 80%;
     height: 40%;
-    background: url("../../実務img/SP/グループ 105 (1).svg");
+    background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
     background-repeat: no-repeat;
     position: absolute;
     transform: translate(75%, 30%);
@@ -106,20 +98,11 @@
 
   &__container {
     position: relative;
-  }
+    max-width: 900px;
 
-  &__container::after {
-    content: "";
-    background: url("../../実務img/voice画像/グループ 133.svg");
-    width: 100vw;
-    height: 80px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: block;
-    position: absolute;
-    top: 103%;
-    left: -20px;
-    transform: translateY(-20px);
+    @media screen and (max-width: 768px){
+      max-width: 768px;
+    }
   }
 
   &__title {

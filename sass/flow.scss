@@ -1,11 +1,13 @@
 .p-flow {
-  //padding-top: 70px;
   background: #FF9C45;
   transform: translateY(30px);
   opacity: 0;
   visibility: hidden;
   transition: transform 3s, opacity 3s, visibility 1s;
+  max-width: 900px;
+  margin: 0 auto;
 
+  
   &__emphasis {
     width: 100%;
     color: #FF9C45;
@@ -19,7 +21,6 @@
               -1px 1px 0 #FFF, 1px -1px 0 #FFF,
               0px 1px 0 #FFF,  0-1px 0 #FFF,
               -1px 0 0 #FFF, 1px 0 0 #FFF;
-    margin: 10px 0;
     position: relative;
 
     @media screen and (max-width: 768px){
@@ -32,7 +33,7 @@
     content: "";
     width: 80%;
     height: 40%;
-    background: url("../../実務img/SP/グループ 105 (1).svg");
+    background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
     background-repeat: no-repeat;
     margin-left: -12%;
     position: absolute;
@@ -51,7 +52,7 @@
     width: 80%;
     height: 40%;
     margin-left: 5%;
-    background: url("../../実務img/SP/グループ 105 (1).svg");
+    background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/029562ed5723da6464ab4d8ce7a0b8336a7b891a/%E5%AE%9F%E5%8B%99img/SP/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20105%20(1).svg");
     background-repeat: no-repeat;
     position: absolute;
     transform: translate(75%, 30%);
@@ -72,9 +73,9 @@
   }
 
   &__list {
-    margin: 30px auto;
     padding: 8px;
     width: 90%;
+    margin: 0 auto;
   }
 
   &__item {

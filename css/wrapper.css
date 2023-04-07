@@ -1,3 +1,8 @@
 .l-wrapper {
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .l-wrapper {
+    max-width: 768px;
+  }
+}

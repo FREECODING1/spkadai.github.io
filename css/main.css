@@ -1,3 +1,6 @@
+.l-main {
+  margin: 0 auto;
+}
 .l-main__container {
   background: #FF9C45;
   overflow: hidden;
