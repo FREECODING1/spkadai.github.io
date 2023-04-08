@@ -22,7 +22,7 @@
 }
 .p-about::after {
   content: "";
-  background: url("../../実務img/voice画像/グループ 133.svg");
+  background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/a616b996194c51b244b38d8b18ce65cdf8098e2d/%E5%AE%9F%E5%8B%99img/voice%E7%94%BB%E5%83%8F/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20133.svg");
   width: 100%;
   height: 70px;
   background-size: 100% 100%;
@@ -100,7 +100,7 @@
 }
 .p-about__section::after {
   content: "選ばれる理由5つのポイント";
-  background: url("../../実務img/SP/グループ 171.svg");
+  background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/a616b996194c51b244b38d8b18ce65cdf8098e2d/%E5%AE%9F%E5%8B%99img/SP/%E3%82%AF%E3%82%99%E3%83%AB%E3%83%BC%E3%83%95%E3%82%9A%20171.svg");
   transform: translateY(-50%);
   display: flex;
   align-items: center;
