@@ -24,13 +24,15 @@
   content: "";
   background: url("https://raw.githubusercontent.com/FREECODING1/spkadai.github.io/a616b996194c51b244b38d8b18ce65cdf8098e2d/%E5%AE%9F%E5%8B%99img/voice%E7%94%BB%E5%83%8F/%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%20133.svg");
   width: 100%;
-  height: 70px;
-  background-size: 100% 100%;
+  height: 97px;
+  background-size: 100%;
   background-repeat: repeat-x;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: scaleY(-1);
   position: absolute;
-  top: 99%;
+  top: 95%;
   z-index: 1;
 }
 .p-about__container {
